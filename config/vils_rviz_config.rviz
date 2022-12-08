@@ -1,0 +1,833 @@
+Panels:
+  - Class: rviz/Selection
+    Name: Selection
+  - Class: rviz/Views
+    Expanded:
+      - /Current View1
+    Name: Views
+    Splitter Ratio: 0.5
+  - Class: rviz/Time
+    Experimental: false
+    Name: Time
+    SyncMode: 0
+    SyncSource: local_registered
+  - Class: rviz/Displays
+    Help Height: 0
+    Name: Displays
+    Property Tree Widget:
+      Expanded:
+        - /Frontend1/camera_visual1/Namespaces1
+        - /Midend1/Path1
+        - /Midend1/Odometry1/Shape1
+      Splitter Ratio: 0.636597931
+    Tree Height: 249
+Toolbars:
+  toolButtonStyle: 2
+Visualization Manager:
+  Class: ""
+  Displays:
+    - Class: rviz/Group
+      Displays:
+        - Class: rviz/Axes
+          Enabled: false
+          Length: 3
+          Name: M
+          Radius: 1
+          Reference Frame: aft_mapped
+          Value: false
+        - Class: rviz/Axes
+          Enabled: true
+          Length: 1
+          Name: L-S
+          Radius: 0.5
+          Reference Frame: world_lidar
+          Value: true
+        - Class: rviz/Axes
+          Enabled: true
+          Length: 1
+          Name: VI-S
+          Radius: 0.5
+          Reference Frame: world
+          Value: true
+        - Alpha: 0.5
+          Cell Size: 1
+          Class: rviz/Grid
+          Color: 130; 130; 130
+          Enabled: false
+          Line Style:
+            Line Width: 0.0299999993
+            Value: Lines
+          Name: Grid
+          Normal Cell Count: 0
+          Offset:
+            X: 0
+            Y: 0
+            Z: 0
+          Plane: XY
+          Plane Cell Count: 10
+          Reference Frame: <Fixed Frame>
+          Value: false
+        - Class: rviz/Image
+          Enabled: true
+          Image Topic: /feature_tracker_/feature_img
+          Max Value: 1
+          Median window: 5
+          Min Value: 0
+          Name: tracked image
+          Normalize Range: true
+          Queue Size: 2
+          Transport Hint: raw
+          Unreliable: false
+          Value: true
+        - Class: rviz/Image
+          Enabled: true
+          Image Topic: /depth/depth_image
+          Max Value: 1
+          Median window: 5
+          Min Value: 0
+          Name: lidar2cam
+          Normalize Range: true
+          Queue Size: 2
+          Transport Hint: raw
+          Unreliable: false
+          Value: true
+        - Class: rviz/TF
+          Enabled: true
+          Frame Timeout: 99999
+          Frames:
+            All Enabled: false
+            aft_mapped:
+              Value: true
+            body:
+              Value: true
+            camera:
+              Value: true
+            global_odom_high_freq:
+              Value: true
+            laser_link:
+              Value: true
+            lidar_tem:
+              Value: true
+            mynteye_depth_frame:
+              Value: true
+            mynteye_imu_frame:
+              Value: true
+            mynteye_imu_frame_processed:
+              Value: true
+            mynteye_left_color_frame:
+              Value: true
+            mynteye_left_mono_frame:
+              Value: true
+            mynteye_link_frame:
+              Value: true
+            mynteye_points_frame:
+              Value: true
+            mynteye_right_color_frame:
+              Value: true
+            mynteye_right_mono_frame:
+              Value: true
+            mynteye_temp_frame:
+              Value: true
+            world:
+              Value: true
+            world_lidar:
+              Value: true
+          Marker Scale: 2
+          Name: TF
+          Show Arrows: false
+          Show Axes: true
+          Show Names: true
+          Tree:
+            world:
+              aft_mapped:
+                {}
+              body:
+                camera:
+                  {}
+                laser_link:
+                  {}
+              global_odom_high_freq:
+                {}
+              lidar_tem:
+                {}
+              world_lidar:
+                {}
+          Update Interval: 0
+          Value: true
+      Enabled: true
+      Name: Fixed
+    - Class: rviz/Group
+      Displays:
+        - Alpha: 1
+          Buffer Length: 1
+          Class: rviz/Path
+          Color: 0; 255; 0
+          Enabled: true
+          Head Diameter: 0.300000012
+          Head Length: 0.200000003
+          Length: 0.300000012
+          Line Style: Billboards
+          Line Width: 0.150000006
+          Name: Path
+          Offset:
+            X: 0
+            Y: 0
+            Z: 0
+          Pose Color: 255; 85; 255
+          Pose Style: None
+          Radius: 0.0299999993
+          Shaft Diameter: 0.100000001
+          Shaft Length: 0.100000001
+          Topic: /vils_estimator/path
+          Unreliable: false
+          Value: true
+        - Alpha: 1
+          Buffer Length: 1
+          Class: rviz/Path
+          Color: 255; 0; 0
+          Enabled: true
+          Head Diameter: 0.300000012
+          Head Length: 0.200000003
+          Length: 0.300000012
+          Line Style: Billboards
+          Line Width: 0.150000006
+          Name: Path
+          Offset:
+            X: 0
+            Y: 0
+            Z: 0
+          Pose Color: 255; 85; 255
+          Pose Style: None
+          Radius: 0.0299999993
+          Shaft Diameter: 0.100000001
+          Shaft Length: 0.100000001
+          Topic: /vils_estimator/lidar_path
+          Unreliable: false
+          Value: true
+        - Class: rviz/MarkerArray
+          Enabled: false
+          Marker Topic: /vins_estimator/camera_pose_visual
+          Name: camera_visual
+          Namespaces:
+            {}
+          Queue Size: 100
+          Value: false
+        - Class: rviz/MarkerArray
+          Enabled: true
+          Marker Topic: /vils_estimator/camera_pose_visual
+          Name: MarkerArray
+          Namespaces:
+            CameraPoseVisualization: true
+          Queue Size: 100
+          Value: true
+        - Alpha: 1
+          Autocompute Intensity Bounds: true
+          Autocompute Value Bounds:
+            Max Value: 10
+            Min Value: -10
+            Value: true
+          Axis: Z
+          Channel Name: intensity
+          Class: rviz/PointCloud2
+          Color: 85; 85; 255
+          Color Transformer: FlatColor
+          Decay Time: 0
+          Enabled: true
+          Invert Rainbow: false
+          Max Color: 255; 255; 255
+          Max Intensity: 185
+          Min Color: 0; 0; 0
+          Min Intensity: 0
+          Name: cloud
+          Position Transformer: XYZ
+          Queue Size: 10
+          Selectable: true
+          Size (Pixels): 3
+          Size (m): 0.100000001
+          Style: Points
+          Topic: /vils_estimator/lidar_cloud
+          Unreliable: false
+          Use Fixed Frame: true
+          Use rainbow: true
+          Value: true
+        - Alpha: 1
+          Autocompute Intensity Bounds: true
+          Autocompute Value Bounds:
+            Max Value: 26.9257908
+            Min Value: -4.31187868
+            Value: true
+          Axis: Z
+          Channel Name: intensity
+          Class: rviz/PointCloud2
+          Color: 255; 255; 127
+          Color Transformer: FlatColor
+          Decay Time: 0
+          Enabled: true
+          Invert Rainbow: false
+          Max Color: 255; 255; 255
+          Max Intensity: 250
+          Min Color: 0; 0; 0
+          Min Intensity: 0
+          Name: raw_cloud
+          Position Transformer: XYZ
+          Queue Size: 10
+          Selectable: true
+          Size (Pixels): 3
+          Size (m): 0.0500000007
+          Style: Flat Squares
+          Topic: /full_cloud
+          Unreliable: false
+          Use Fixed Frame: true
+          Use rainbow: true
+          Value: true
+        - Class: rviz/Marker
+          Enabled: false
+          Marker Topic: /vils_estimator/key_poses
+          Name: Marker
+          Namespaces:
+            {}
+          Queue Size: 100
+          Value: false
+        - Alpha: 1
+          Autocompute Intensity Bounds: true
+          Autocompute Value Bounds:
+            Max Value: 10
+            Min Value: -10
+            Value: true
+          Axis: Z
+          Channel Name: intensity
+          Class: rviz/PointCloud
+          Color: 255; 170; 127
+          Color Transformer: FlatColor
+          Decay Time: 0
+          Enabled: false
+          Invert Rainbow: false
+          Max Color: 255; 255; 255
+          Max Intensity: 4096
+          Min Color: 0; 0; 0
+          Min Intensity: 0
+          Name: current_point
+          Position Transformer: XYZ
+          Queue Size: 10
+          Selectable: true
+          Size (Pixels): 8
+          Size (m): 0.00999999978
+          Style: Points
+          Topic: /vils_estimator/point_cloud
+          Unreliable: false
+          Use Fixed Frame: true
+          Use rainbow: true
+          Value: false
+        - Alpha: 0.5
+          Autocompute Intensity Bounds: false
+          Autocompute Value Bounds:
+            Max Value: 8
+            Min Value: -1
+            Value: false
+          Axis: Z
+          Channel Name: intensity
+          Class: rviz/PointCloud
+          Color: 170; 255; 0
+          Color Transformer: AxisColor
+          Decay Time: 999999
+          Enabled: false
+          Invert Rainbow: true
+          Max Color: 0; 0; 0
+          Max Intensity: 4096
+          Min Color: 0; 0; 0
+          Min Intensity: 0
+          Name: history_point
+          Position Transformer: XYZ
+          Queue Size: 10
+          Selectable: true
+          Size (Pixels): 3
+          Size (m): 0.300000012
+          Style: Points
+          Topic: /vils_estimator/history_cloud
+          Unreliable: false
+          Use Fixed Frame: false
+          Use rainbow: false
+          Value: false
+        - Alpha: 1
+          Autocompute Intensity Bounds: false
+          Autocompute Value Bounds:
+            Max Value: 5.54272842
+            Min Value: 0.310016513
+            Value: true
+          Axis: Z
+          Channel Name: intensity
+          Class: rviz/PointCloud2
+          Color: 255; 255; 255
+          Color Transformer: Intensity
+          Decay Time: 0
+          Enabled: true
+          Invert Rainbow: false
+          Max Color: 255; 255; 255
+          Max Intensity: 25
+          Min Color: 0; 0; 0
+          Min Intensity: -1
+          Name: depth
+          Position Transformer: XYZ
+          Queue Size: 10
+          Selectable: true
+          Size (Pixels): 10
+          Size (m): 0.300000012
+          Style: Points
+          Topic: /depth/depth_feature
+          Unreliable: false
+          Use Fixed Frame: true
+          Use rainbow: true
+          Value: true
+        - Alpha: 1
+          Autocompute Intensity Bounds: true
+          Autocompute Value Bounds:
+            Max Value: 10
+            Min Value: -10
+            Value: true
+          Axis: Z
+          Channel Name: intensity
+          Class: rviz/PointCloud2
+          Color: 255; 255; 255
+          Color Transformer: Intensity
+          Decay Time: 0
+          Enabled: false
+          Invert Rainbow: false
+          Max Color: 255; 255; 255
+          Max Intensity: 23.7357063
+          Min Color: 0; 0; 0
+          Min Intensity: -1
+          Name: unit_feature
+          Position Transformer: XYZ
+          Queue Size: 10
+          Selectable: true
+          Size (Pixels): 3
+          Size (m): 0.00999999978
+          Style: Flat Squares
+          Topic: /depth/test_feature
+          Unreliable: false
+          Use Fixed Frame: true
+          Use rainbow: true
+          Value: false
+      Enabled: true
+      Name: Frontend
+    - Class: rviz/Group
+      Displays:
+        - Alpha: 1
+          Buffer Length: 1
+          Class: rviz/Path
+          Color: 85; 255; 255
+          Enabled: true
+          Head Diameter: 0.300000012
+          Head Length: 0.200000003
+          Length: 0.300000012
+          Line Style: Billboards
+          Line Width: 0.150000006
+          Name: Path
+          Offset:
+            X: 0
+            Y: 0
+            Z: 0
+          Pose Color: 255; 85; 255
+          Pose Style: None
+          Radius: 0.0299999993
+          Shaft Diameter: 0.100000001
+          Shaft Length: 0.100000001
+          Topic: /aft_mapped_path
+          Unreliable: false
+          Value: true
+        - Class: rviz/Marker
+          Enabled: true
+          Marker Topic: /vils_estimator/constraint_mode
+          Name: Marker
+          Namespaces:
+            key_poses: true
+          Queue Size: 100
+          Value: true
+        - Angle Tolerance: 0.100000001
+          Class: rviz/Odometry
+          Covariance:
+            Orientation:
+              Alpha: 0.5
+              Color: 255; 255; 127
+              Color Style: Unique
+              Frame: Local
+              Offset: 1
+              Scale: 1
+              Value: true
+            Position:
+              Alpha: 0.300000012
+              Color: 204; 51; 204
+              Scale: 1
+              Value: true
+            Value: true
+          Enabled: false
+          Keep: 100
+          Name: Odometry
+          Position Tolerance: 0.100000001
+          Shape:
+            Alpha: 1
+            Axes Length: 0.100000001
+            Axes Radius: 0.0500000007
+            Color: 255; 25; 0
+            Head Length: 0.300000012
+            Head Radius: 0.100000001
+            Shaft Length: 1
+            Shaft Radius: 0.0500000007
+            Value: Axes
+          Topic: /vils_estimator/lidar_pose
+          Unreliable: false
+          Value: false
+        - Alpha: 1
+          Autocompute Intensity Bounds: true
+          Autocompute Value Bounds:
+            Max Value: 10
+            Min Value: -10
+            Value: true
+          Axis: Z
+          Channel Name: intensity
+          Class: rviz/PointCloud2
+          Color: 85; 255; 255
+          Color Transformer: FlatColor
+          Decay Time: 0
+          Enabled: false
+          Invert Rainbow: false
+          Max Color: 255; 255; 255
+          Max Intensity: 15.0995359
+          Min Color: 0; 0; 0
+          Min Intensity: 0.000334277051
+          Name: less_flat
+          Position Transformer: XYZ
+          Queue Size: 10
+          Selectable: true
+          Size (Pixels): 2
+          Size (m): 0.100000001
+          Style: Points
+          Topic: /laser_cloud_less_flat
+          Unreliable: false
+          Use Fixed Frame: true
+          Use rainbow: true
+          Value: false
+        - Alpha: 1
+          Autocompute Intensity Bounds: true
+          Autocompute Value Bounds:
+            Max Value: 10
+            Min Value: -10
+            Value: true
+          Axis: Z
+          Channel Name: intensity
+          Class: rviz/PointCloud2
+          Color: 255; 0; 0
+          Color Transformer: FlatColor
+          Decay Time: 0
+          Enabled: false
+          Invert Rainbow: false
+          Max Color: 121; 215; 255
+          Max Intensity: 207
+          Min Color: 0; 0; 0
+          Min Intensity: 0
+          Name: less_sharp
+          Position Transformer: XYZ
+          Queue Size: 10
+          Selectable: true
+          Size (Pixels): 5
+          Size (m): 0.300000012
+          Style: Points
+          Topic: /laser_cloud_less_sharp
+          Unreliable: false
+          Use Fixed Frame: true
+          Use rainbow: true
+          Value: false
+        - Class: rviz/Marker
+          Enabled: true
+          Marker Topic: /vils_estimator/sum_mode
+          Name: sum_mode
+          Namespaces:
+            sum_mode: true
+          Queue Size: 100
+          Value: true
+        - Alpha: 0.100000001
+          Autocompute Intensity Bounds: true
+          Autocompute Value Bounds:
+            Max Value: 10
+            Min Value: -1
+            Value: false
+          Axis: Z
+          Channel Name: intensity
+          Class: rviz/PointCloud2
+          Color: 255; 170; 255
+          Color Transformer: AxisColor
+          Decay Time: 0
+          Enabled: true
+          Invert Rainbow: false
+          Max Color: 255; 255; 255
+          Max Intensity: 250
+          Min Color: 0; 0; 0
+          Min Intensity: 0
+          Name: local_map
+          Position Transformer: XYZ
+          Queue Size: 10
+          Selectable: true
+          Size (Pixels): 2
+          Size (m): 0.0500000007
+          Style: Points
+          Topic: /laser_cloud_map
+          Unreliable: false
+          Use Fixed Frame: true
+          Use rainbow: true
+          Value: true
+        - Alpha: 0.5
+          Autocompute Intensity Bounds: true
+          Autocompute Value Bounds:
+            Max Value: 4.23342419
+            Min Value: 0.617631674
+            Value: true
+          Axis: Z
+          Channel Name: intensity
+          Class: rviz/PointCloud2
+          Color: 255; 255; 255
+          Color Transformer: FlatColor
+          Decay Time: 0
+          Enabled: true
+          Invert Rainbow: false
+          Max Color: 255; 255; 255
+          Max Intensity: 205
+          Min Color: 0; 0; 0
+          Min Intensity: 0
+          Name: local_registered
+          Position Transformer: XYZ
+          Queue Size: 10
+          Selectable: true
+          Size (Pixels): 2
+          Size (m): 0.00999999978
+          Style: Points
+          Topic: /velodyne_cloud_registered
+          Unreliable: false
+          Use Fixed Frame: true
+          Use rainbow: true
+          Value: true
+      Enabled: true
+      Name: Midend
+    - Class: rviz/Group
+      Displays:
+        - Alpha: 0.5
+          Autocompute Intensity Bounds: true
+          Autocompute Value Bounds:
+            Max Value: 8
+            Min Value: -2
+            Value: false
+          Axis: Z
+          Channel Name: intensity
+          Class: rviz/PointCloud2
+          Color: 255; 255; 255
+          Color Transformer: FlatColor
+          Decay Time: 0
+          Enabled: true
+          Invert Rainbow: false
+          Max Color: 255; 255; 255
+          Max Intensity: 250
+          Min Color: 0; 0; 0
+          Min Intensity: 0
+          Name: LOCAL
+          Position Transformer: XYZ
+          Queue Size: 10
+          Selectable: true
+          Size (Pixels): 1
+          Size (m): 0.100000001
+          Style: Points
+          Topic: /laser_localizer_cloud
+          Unreliable: false
+          Use Fixed Frame: true
+          Use rainbow: true
+          Value: true
+        - Alpha: 0.150000006
+          Autocompute Intensity Bounds: true
+          Autocompute Value Bounds:
+            Max Value: 11.5
+            Min Value: -1
+            Value: false
+          Axis: Z
+          Channel Name: intensity
+          Class: rviz/PointCloud2
+          Color: 255; 255; 255
+          Color Transformer: AxisColor
+          Decay Time: 0
+          Enabled: true
+          Invert Rainbow: false
+          Max Color: 255; 255; 255
+          Max Intensity: 250
+          Min Color: 0; 0; 0
+          Min Intensity: 0
+          Name: GLOBAL
+          Position Transformer: XYZ
+          Queue Size: 10
+          Selectable: true
+          Size (Pixels): 1
+          Size (m): 0.0500000007
+          Style: Points
+          Topic: /map_data_cloud
+          Unreliable: false
+          Use Fixed Frame: true
+          Use rainbow: true
+          Value: true
+        - Angle Tolerance: 0.100000001
+          Class: rviz/Odometry
+          Covariance:
+            Orientation:
+              Alpha: 0.5
+              Color: 255; 255; 127
+              Color Style: Unique
+              Frame: Local
+              Offset: 1
+              Scale: 1
+              Value: true
+            Position:
+              Alpha: 0.300000012
+              Color: 204; 51; 204
+              Scale: 1
+              Value: true
+            Value: true
+          Enabled: true
+          Keep: 3
+          Name: ODOM
+          Position Tolerance: 0.100000001
+          Shape:
+            Alpha: 1
+            Axes Length: 1
+            Axes Radius: 0.5
+            Color: 255; 25; 0
+            Head Length: 0.300000012
+            Head Radius: 0.100000001
+            Shaft Length: 1
+            Shaft Radius: 0.0500000007
+            Value: Axes
+          Topic: /laser_localizer
+          Unreliable: false
+          Value: true
+        - Alpha: 1
+          Buffer Length: 1
+          Class: rviz/Path
+          Color: 255; 170; 255
+          Enabled: false
+          Head Diameter: 0.300000012
+          Head Length: 0.200000003
+          Length: 0.300000012
+          Line Style: Billboards
+          Line Width: 0.200000003
+          Name: Path
+          Offset:
+            X: 0
+            Y: 0
+            Z: 0
+          Pose Color: 255; 85; 255
+          Pose Style: None
+          Radius: 0.0299999993
+          Shaft Diameter: 0.100000001
+          Shaft Length: 0.100000001
+          Topic: /aft_mapped_path
+          Unreliable: false
+          Value: false
+        - Class: rviz/Marker
+          Enabled: true
+          Marker Topic: /graph_nodes
+          Name: POSE
+          Namespaces:
+            /world: true
+          Queue Size: 100
+          Value: true
+        - Class: rviz/Marker
+          Enabled: true
+          Marker Topic: /sc_loop_nodes
+          Name: SC
+          Namespaces:
+            {}
+          Queue Size: 100
+          Value: true
+        - Class: rviz/Marker
+          Enabled: true
+          Marker Topic: /tr_loop_nodes
+          Name: TR
+          Namespaces:
+            /world: true
+          Queue Size: 100
+          Value: true
+        - Class: rviz/Marker
+          Enabled: true
+          Marker Topic: /between_factor_nodes
+          Name: BETWEEN
+          Namespaces:
+            /world: true
+          Queue Size: 100
+          Value: true
+        - Class: rviz/Marker
+          Enabled: true
+          Marker Topic: /factor_info
+          Name: factor_info
+          Namespaces:
+            sum_mode: true
+          Queue Size: 100
+          Value: true
+      Enabled: true
+      Name: Backend
+  Enabled: true
+  Global Options:
+    Background Color: 0; 0; 0
+    Default Light: true
+    Fixed Frame: world
+    Frame Rate: 30
+  Name: root
+  Tools:
+    - Class: rviz/MoveCamera
+    - Class: rviz/Select
+    - Class: rviz/FocusCamera
+    - Class: rviz/Measure
+    - Class: rviz/SetInitialPose
+      Topic: /initialpose
+    - Class: rviz/SetGoal
+      Topic: /move_base_simple/goal
+    - Class: rviz/PublishPoint
+      Single click: true
+      Topic: /clicked_point
+  Value: true
+  Views:
+    Current:
+      Class: rviz/Orbit
+      Distance: 43.9673538
+      Enable Stereo Rendering:
+        Stereo Eye Separation: 0.0599999987
+        Stereo Focal Distance: 1
+        Swap Stereo Eyes: false
+        Value: false
+      Focal Point:
+        X: 4.50934076
+        Y: 8.53798866
+        Z: 6.69749403
+      Focal Shape Fixed Size: false
+      Focal Shape Size: 0.0500000007
+      Invert Z Axis: false
+      Name: Current View
+      Near Clip Distance: 0.00999999978
+      Pitch: 0.690397918
+      Target Frame: body
+      Value: Orbit (rviz)
+      Yaw: 2.85541773
+    Saved: ~
+Window Geometry:
+  Displays:
+    collapsed: false
+  Height: 921
+  Hide Left Dock: false
+  Hide Right Dock: true
+  QMainWindow State: 000000ff00000000fd000000040000000000000193000002f6fc0200000019fb0000001200530065006c0065006300740069006f006e0000000028000002720000006600fffffffb0000001e0054006f006f006c002000500072006f007000650072007400690065007302000001ed000001df00000185000000a3fb000000120056006900650077007300200054006f006f02000001df000002110000018500000122fb000000200054006f006f006c002000500072006f0070006500720074006900650073003203000002880000011d000002210000017afb0000002000730065006c0065006300740069006f006e00200062007500660066006500720200000138000000aa0000023a00000294fb00000014005700690064006500530074006500720065006f02000000e6000000d2000003ee0000030bfb0000000c004b0069006e0065006300740200000186000001060000030c00000261fb0000001200720061007700200049006d0061006700650000000028000000300000000000000000fb00000012007200610077005f0069006d00610067006502000006990000014e000000ef000000bbfb00000020006c006f006f0070005f006d0061007400630068005f0069006d0061006700650000000107000000840000000000000000fc00000031000002720000000000fffffffa000000000100000001fb0000001200720061007700200049006d0061006700650000000000ffffffff0000000000000000fb0000001000410052005f0069006d0061006700650100000373000000160000000000000000fb0000001200720061007700200069006d006100670065010000038f000000160000000000000000fb00000012007200610077005f0069006d006100670065030000045d000001e000000120000000cefb00000020006c006f006f0070005f006d0061007400630068005f0069006d00610067006501000001bb000000b70000000000000000fb000000100044006900730070006c006100790073010000003100000147000000e400fffffffb0000001a0074007200610063006b0065006400200069006d0061006700650100000180000000d00000001b00fffffffb0000000a0049006d00610067006501000001a00000009b0000000000000000fb0000000a0049006d0061006700650300001225000000b8000000ea000000b4fb0000000a0049006d00610067006501000001e1000000b80000000000000000fb0000000a0049006d00610067006501000001b2000000e70000000000000000fb00000012006c0069006400610072003200630061006d0100000258000000cf0000001b00fffffffb0000000a0049006d0061006700650100000251000000d60000000000000000fb0000000a0049006d006100670065010000016a0000012f0000000000000000fb0000000a0049006d00610067006501000002890000012a00000000000000000000000100000122000002f6fc0200000003fb0000001e0054006f006f006c002000500072006f00700065007200740069006500730100000041000000780000000000000000fc00000031000002f60000000000fffffffa000000000100000002fb000000100044006900730070006c0061007900730000000000ffffffff0000000000000000fb0000000a00560069006500770073000000023f0000016a0000012200fffffffb0000001200530065006c0065006300740069006f006e010000025a000000b200000000000000000000000200000529000000e4fc0100000002fb0000001a0074007200610063006b0065006400200069006d006100670065020000000000000170000001c800000079fb0000000a00560069006500770073030000004e00000080000002e100000197000000030000046d00000046fc0100000002fb0000000800540069006d006501000000000000046d000003de00fffffffb0000000800540069006d00650100000000000004500000000000000000000002d2000002f600000004000000040000000800000008fc0000000100000002000000010000000a0054006f006f006c00730100000000ffffffff0000000000000000
+  Selection:
+    collapsed: false
+  Time:
+    collapsed: false
+  Views:
+    collapsed: true
+  Width: 1133
+  X: 781
+  Y: 33
+  lidar2cam:
+    collapsed: false
+  tracked image:
+    collapsed: false
